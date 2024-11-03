@@ -1,5 +1,13 @@
 export default eventHandler(async (event) => {
   const body = await readBody(event) || {}
+
+  if (!body) {
+    return { error: 'Request body is empty or undefined' }
+  }
+
+  process.stdout.write('v1')
+  process.stdout.write(body)
+
   const session = await getUserSession(event)
   const adminPassword = process.env.NUXT_ADMIN_PASSWORD || 'admin'
 
