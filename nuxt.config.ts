@@ -24,5 +24,9 @@ export default defineNuxtConfig({
         commaDangle: 'never'
       }
     }
+  },
+  sourcemap: {
+    server: true,
+    client: true
   }
 })
