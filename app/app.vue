@@ -28,7 +28,7 @@ await getImages()
 
 <template>
   <div
-    class="bg-black min-h-[100dvh] overflow-x-auto relative"
+    class="bg-vintage min-h-[100dvh] overflow-x-auto relative"
     :class="{ 'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/' }"
   >
     <UNotifications />
